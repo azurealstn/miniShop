@@ -1,9 +1,19 @@
+:root {
+  /* color */
+  --color-black: #383c45;
+  --color-white: #fff;
+  --color-blue: #367cbf;
+  --color-yellow: #fab524;
+  --color-pink: #fd7578;
+}
+
 body {
   background-color: #383c45;
 }
 ul {
   list-style: none;
 }
+
 /* header start */
 header {
   display: flex;
@@ -14,7 +24,8 @@ header {
 }
 header .logo,
 header .menu button {
-  transition: ease-in-out 0.2s linear;
+  transition: transform 300ms ease;
+  cursor: pointer;
 }
 header .logo:hover {
   transform: scale(1.2);
@@ -34,7 +45,7 @@ header .menu button img {
 header .menu button {
   border: 0;
   outline: 0;
-  background-color: #383c45;
+  background-color: var(--color-black);
   cursor: pointer;
   width: 66px;
   height: 56px;
@@ -45,13 +56,13 @@ header .menu button:hover {
   transform: scale(1.2);
 }
 header .menu button.blue {
-  background-color: #367cbf;
+  background-color: var(--color-blue);
 }
 header .menu button.yellow {
-  background-color: #fab524;
+  background-color: var(--color-yellow);
 }
 header .menu button.pink {
-  background-color: #fd7578;
+  background-color: var(--color-pink);
 }
 /* header end */
 
@@ -60,17 +71,18 @@ header .menu button.pink {
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  overflow-y: scroll;
+  height: 700px;
 }
 .section-01 .list li{
   display: flex;
   align-items: center;
-  background-color: #fff;
-  margin-bottom: 10px;
+  background-color: var(--color-white);
+  margin-bottom: -10px;
   width: 550px;
   margin-right: 25px;
   height: 60px;
-  padding: 0 10px;
+  padding: 10px 10px;
   border-radius: 5px;
 }
 .section-01 .list li img {
@@ -81,4 +93,7 @@ header .menu button.pink {
 .section-01 .list li .text {
   font-family: 'Roboto Mono', monospace;
   font-size: 18px;
+}
+.invisible {
+  visibility: hidden;
 }
